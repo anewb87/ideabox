@@ -15,13 +15,21 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <main className='App'>
         <h1>IdeaBox</h1>
-        <Ideas name='Travis' age='22' />
-        <Ideas name='Lexy' age='115' />
+        {!this.state.ideas.length && <h2>No ideas yet -- add some!</h2>}
+        <Ideas ideas={this.state.ideas} />
       </main>
     )
+
+    // return (
+    //   <main className='App'>
+    //     <h1>IdeaBox</h1>
+    //     <Ideas ideas={this.state.ideas} />
+    //   </main>
+    // )
   }
 }
 
