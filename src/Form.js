@@ -11,7 +11,15 @@ class Form extends Component {
     }
 
     handleChange = event => {
-        this.setState({ [event.target.name]: event.target.value })
+        //scrimba says to avoid potential bugs by using this code rather than the commented out code below
+        // this.setState({ [event.target.name]: event.target.value })
+
+        const {name, value} = event.target
+        this.setState({
+            [name]: value
+        })
+
+        
     }
 
     submitIdea = event => {
